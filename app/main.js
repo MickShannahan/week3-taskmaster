@@ -5,14 +5,6 @@ import Swal from "sweetalert2"
 class App {
   listController = new ListController();
 
-  swalTest() {
-    Swal.fire({
-      title: 'Error!',
-      text: 'Do you want to continue',
-      icon: 'error',
-      confirmButtonText: 'Cool'
-    })
-  }
 }
 
 window["app"] = new App();

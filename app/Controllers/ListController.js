@@ -1,5 +1,4 @@
 import ListService from "../Services/ListService.js";
-import Swal from "sweetalert2"
 
 //TODO Don't forget to render to the screen after every data change.
 function _drawLists() { }
