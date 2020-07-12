@@ -18,6 +18,24 @@ function _loadState() {
 _loadState();
 
 class Store {
+  constructor() {
+
+  }
+  addList(newList) {
+    _state.lists.push(newList)
+    console.log(_state);
+
+  }
+  deleteList(listToRemove) {
+    _state.lists.splice(listToRemove, 1)
+  }
+  addTask(listIndex, task) {
+    _state.lists[listIndex].tasks.push(task)
+  }
+  deleteTask(listIndex, taskIndex) {
+    _state.lists[listIndex].tasks.splice(taskIndex, 1)
+    console.log(`removed task: ${_state.lists[listIndex].tasks.taskIndex}`)
+  }
   /**
    * Provides access to application state data
    */

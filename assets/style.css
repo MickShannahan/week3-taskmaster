@@ -1,0 +1,48 @@
+.bg-list-body{
+  background-color: rgba(68, 75, 85, 0.5);
+}
+
+.task-font{
+  font-family: 'Asap', sans-serif;
+}
+
+.task-font-light{
+  font-family: 'Asap', sans-serif;
+}
+
+.list-width{
+  min-width: 40vh;
+  max-width:  70vh;
+}
+
+.form-header-text{
+  color: rgb(243, 243, 243)!important;
+}
+
+.btn-list-x{
+  height: 30%;
+}
+
+.btn-task-x{
+  height: 30%;
+}
+
+.btn-header{
+  min-height: 100%;
+}
+
+.form-header{
+margin-bottom: 0em!important;
+}
+
+.form-header::placeholder{
+  color: rgb(219, 219, 219, .75);
+}
+
+.form-header:active{
+  outline-color: rgb(84, 81, 92) ;
+   
+}
+
+
+

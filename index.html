@@ -11,13 +11,98 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Asap:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/style.css">
 </head>
 
-<body class="bg-dark">
+<body class="bg-dark task-font-light">
   <header class="container-fluid">
-    <button onclick="app.ListController.swalTest()">try sweet alerts</button>
+    <div class="row bg-danger justify-content-center ">
+      <div class="col-7 text-right text-light ">
+        <h1 class="p-3 font-weight-bold"><b> <i>Task Master</i></b></h1>
+      </div>
+      <div class="col-5">
+        <form onsubmit="app.listController.addList(event)" class="row h-100 justify-content-end align-content-center">
+          <div class="form-group form-header p-0 col-9 mx-0">
+            <input type="text" name="newListName" id=""
+              class="form-control form-header pl-4 h-100 m-0 bg-danger  rounded-0 border-0 text-light text-font-light"
+              placeholder="> Add a New List...">
+          </div>
+          <button type="submit" class=" col-3 d-flex mx-0 btn btn-light btn-header rounded-0 text-danger"><i
+              class="far fa-calendar-plus p-2"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <!-- <div id="modal-zone">
+      Button trigger modal
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+        Launch static backdrop modal
+      </button>
+
+      Modal
+      <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
   </header>
+  <!-- HEADER TO MAIN -->
+
+
+  <main class="container-fluid">
+    <!-- THIS IS WHERE LIST CARDS GO -->
+    <div id="list-space" class="row mt-3 p-3 mx-5">
+      <!-- LIST TEMPLATE START -->
+      <div class="col-4 shadow-sm bg-secondary border-rounded rounded-lg">
+        <div class="row">
+          <div class="col-10">
+            <h4 class="p-3 mt-2">List name</h4>
+          </div>
+          <button onclick="app.listController.deletList('id')"
+            class="btn btn-danger btn-list-x rounded-0 col-2 bg-danger justify-content-center d-flex align-items-center">
+            <i class="far fa-calendar-times"></i>
+          </button>
+          <div class="col-12 bg-list-body py-2 pr-0 border-top text-light">
+            <div class="col-12">
+              <form class="row align-items-center" onsubmit="app.listController.addTask(event, 'id')">
+                <div class=" col-10 pr-0 form-group">
+                  <input type="text" name="task" id="" class="form-control bg-list-body mx-0 mt-3  rounded-0
+                  border-0" placeholder="Add a new task...">
+                </div>
+                <button class="col-2 btn btn-outline-dark rounded-0"><i class="far fa-plus-square"></i></button>
+              </form>
+              <div class="row">
+                <div class="col-10 d-flex align-items-center"> Task goes here</div>
+                <button onclick="app.listController.deletTask()"
+                  class="col-2 btn btn-danger btn-task rounded-0 py-0 bg-danger"> X</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LIST TEMPLATE -->
+    </div>
+    </div>
+
+  </main>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -30,6 +115,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/c9c3abf34d.js" crossorigin="anonymous"></script>
   <script type="module" src="app/main.js"></script>
 </body>
 
