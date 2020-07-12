@@ -18,3 +18,10 @@ export const generateThis = function () {
   result = choices[Math.floor(Math.random() * choices.length)]
   return result + ' list'
 }
+
+export const generateColor = function () {
+  let result = '';
+  let choices = ["grey", "dark-grey", "white", "red-grey", "maroon", "grey"]
+  result = choices[Math.floor(Math.random() * choices.length)]
+  return result + ' list'
+}

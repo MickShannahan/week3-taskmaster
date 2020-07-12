@@ -36,6 +36,9 @@ class Store {
     _state.lists[listIndex].tasks.splice(taskIndex, 1)
     console.log(`removed task: ${_state.lists[listIndex].tasks.taskIndex}`)
   }
+  changeColor(listIndex) {
+    _state.lists[listIndex].bgColor = _state.lists[listIndex].ColorChange
+  }
   /**
    * Provides access to application state data
    */

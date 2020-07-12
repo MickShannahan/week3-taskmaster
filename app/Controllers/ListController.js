@@ -54,6 +54,11 @@ export default class ListController {
     _drawLists()
   }
 
+  changeColor(listId) {
+    _listService.changeColor(listId)
+    _drawLists()
+  }
+
 
   //TODO: Your app will need the ability to create, and delete both lists and listItems
 }

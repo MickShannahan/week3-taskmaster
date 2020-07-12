@@ -44,6 +44,15 @@ class ListService {
     }
     console.log("task index could not be found");
   }
+  changeColor(listId) {
+    let listIndex = _store.State.lists.findIndex(list => list.id == listId)
+    if (listIndex >= 0) {
+      _store.changeColor(listIndex)
+      console.log(listIndex);
+      return
+    }
+    console.log("list index could not be found");
+  }
 
 }
 

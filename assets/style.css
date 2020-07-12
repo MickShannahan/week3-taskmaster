@@ -1,18 +1,22 @@
 .bg-list-body{
-  background-color: rgba(68, 75, 85, 0.5);
+  background-color: rgba(66, 70, 75, 0.7);
 }
 
+.bg-darken{
+  background-color: rgba(66, 70, 75, 0.2);
+}
 .task-font{
   font-family: 'Asap', sans-serif;
 }
 
 .task-font-light{
   font-family: 'Asap', sans-serif;
+
 }
 
 .list-width{
-  min-width: 40vh;
-  max-width:  70vh;
+  min-width: 25vw;
+  max-width:  70vw;
 }
 
 .form-header-text{
@@ -44,5 +48,24 @@ margin-bottom: 0em!important;
    
 }
 
+.hd-grey{
+  background-color:#6c757d;
+}
+
+.hd-dark-grey{
+  background-color:#525961;
+}
+
+.hd-white{
+  background-color:#e6e6e6;
+}
+
+.hd-red-grey{
+  background-color:#c55b66;
+}
+
+.hd-maroon{
+  background-color:#c53644;
+}
 
 
