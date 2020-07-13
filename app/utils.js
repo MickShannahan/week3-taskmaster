@@ -14,7 +14,7 @@ export const generateId = function () {
 
 export const generateThis = function () {
   let result = '';
-  let choices = ["this", "that", "the other", "this one", "this", "that other", "the"]
+  let choices = ["this", "that", "the other", "this one", "this", "this other", "that one", "that other", "the"]
   result = choices[Math.floor(Math.random() * choices.length)]
   return result + ' list'
 }
