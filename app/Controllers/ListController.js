@@ -34,9 +34,11 @@ export default class ListController {
   }
 
   deleteList(id) {
-    window.confirm("Are you sure you want to delete this List of Tasks?")
-    _listService.deleteList(id)
-    _drawLists()
+    if (window.confirm("Are you sure you want to delete this List of Tasks?")) {
+
+      _listService.deleteList(id)
+      _drawLists()
+    }
   }
 
   addTask(event, id) {
