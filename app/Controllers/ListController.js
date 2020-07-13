@@ -51,9 +51,12 @@ export default class ListController {
   }
 
   deleteTask(listId, taskIndex) {
-    _listService.deleteTask(listId, taskIndex)
-    console.log(listId, taskIndex);
-    _drawLists()
+    if (window.confirm("Are you sure you want to delete this task?")) {
+
+      _listService.deleteTask(listId, taskIndex)
+      console.log(listId, taskIndex);
+      _drawLists()
+    }
   }
 
   changeColor(listId) {
